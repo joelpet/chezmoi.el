@@ -66,6 +66,7 @@ N, BUF-TYPE, CTRL-BUF, START, and END are all passed to `ediff'."
 (defvar chezmoi-ediff--ediff-quit-hook ()
   (advice-remove 'ediff-get-region-contents #'chezmoi-ediff--ediff-get-region-contents))
 
+;;;###autoload
 (defun chezmoi-ediff (file)
   "Choose a FILE to merge with its source using `ediff'.
 Note: Does not run =chezmoi merge=."

@@ -76,6 +76,7 @@
 	       (cl-mapcar #'expand-file-name)
 	       (member (expand-file-name file))))
 
+;;;###autoload
 (defun chezmoi-diff (arg)
   "View output of =chezmoi diff= in a diff-buffer.
 If ARG is non-nil, switch to the diff-buffer."
@@ -200,6 +201,7 @@ If ARG is non-nil, switch to the diff-buffer."
 		 chezmoi--dispatch
 		 cl-first)))
 
+;;;###autoload
 (defun chezmoi-write (&optional file arg)
   "Sync FILE.  How it syncs depends if FILE is in source or target.
 If FILE is in source state, run =chezmoi apply= on the target to overwrite it.
@@ -249,6 +251,7 @@ PROMPT, CHOICES, and CATEGORY are passed to `complete-with-action'."
 		       (complete-with-action action choices string predicate)))
 		   nil t))
 
+;;;###autoload
 (defun chezmoi-find (file)
   "Edit a source FILE managed by chezmoi.
 If the target file has the same state as the source file,add a hook to
@@ -271,6 +274,7 @@ Note: Does not run =chezmoi edit=."
 	(unless chezmoi-mode (chezmoi-mode))
 	source-file))))
 
+;;;###autoload
 (defun chezmoi-sync-files (files &optional arg)
   "Iteratively select file from FILES to sync.
 Interactively select whether to sync the source state or the target state.
@@ -290,6 +294,7 @@ Prefix ARG is passed to `chezmoi-write'."
 		(chezmoi-write file arg))
       (setq files (remove file files)))))
 
+;;;###autoload
 (defun chezmoi-open-other (file)
   "Open buffer's target FILE."
   (interactive (list (buffer-file-name)))

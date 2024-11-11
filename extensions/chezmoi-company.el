@@ -66,6 +66,7 @@ The value of the path if candidate is a string.  Otherwise indicate type."
           ((hash-table-p value) " <Object>")
           (t ""))))
 
+;;;###autoload
 (defun chezmoi-company-backend (command &optional arg &rest ignored)
   "Company backend for chezmoi.
 Provides completion using =chezmoi data=.  COMMAND, ARG, and IGNORED
