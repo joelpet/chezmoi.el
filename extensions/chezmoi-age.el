@@ -1,4 +1,4 @@
-;;; chezmoi-ediff.el --- Ediff integration for chezmoi -*- lexical-binding: t -*-
+;;; chezmoi-age.el --- Age integration for chezmoi -*- lexical-binding: t -*-
 
 ;; Author: Harrison Pielke-Lombardo
 ;; Maintainer: Harrison Pielke-Lombardo
